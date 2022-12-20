@@ -12,8 +12,8 @@ RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/rip
     && dpkg -i ripgrep_11.0.2_amd64.deb
 
 # Install Starship https://starship.rs/ for pretty prompt
-RUN curl -fsSL https://starship.rs/install.sh | bash /dev/stdin --yes \
-    && echo 'eval "$(starship init zsh)"' >> /root/.zshrc
+# RUN curl -fsSL https://starship.rs/install.sh | bash /dev/stdin --yes \
+#     && echo 'eval "$(starship init zsh)"' >> /root/.zshrc
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
